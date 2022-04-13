@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hablu programmer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        h2{
+            font-size: 30px;
+            font-weight: 500;
+            color: crimson;
+            text-align: center;
+
+        }
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            color: blue;
+            
+        }
+        h1{
+            font-size: 35px;
+            text-align: center;
+            color: red;
+        }
+        .calculator-team {
+            width: 415px;
+            height: 500px;
+            position: absolute;
+            border: 1px solid #ddd;
+            top: 50%;
+            left: 50%;
+            background: #f7f7f7;
+            transform: translate(-50%, -50%);
+        }
+        table{
+            border-collapse: collapse;
+           background : #191919;
+           border: 2px solid rgb(51, 49, 49);
+           box-shadow: rgba(0, 0, 0, 0.21)10px 20px 40px 0px ;
+        }
+        tr{
+
+        }
+        td{
+            border: 1px solid #191919;
+        }
+        input[type="button"] {
+            color: #fff;
+            width: 100px;
+            height: 80px;
+            background: black;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+
+        }
+        input[type="text"] {
+            height: 120px;
+            width: 340px;
+            padding: 12px 35px;
+            text-align: right;
+            border: none;
+            font-size: 35px;
+            outline: none;
+            }
+            input[type="button"]:hover{
+                background: red;
+                color:#fff;
+
+            }
+    </style>
+</head>
+<body>
+    <h1>create calculator</h1>
+    <h2>Made By Jintu</h2>
+    <div class="calculator-team">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id = "Myresult"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="C" onclick="deleted()"></td>
+                <td><input type="button" value="(" onclick="calculator('(')"></td>
+                <td><input type="button" value=")" onclick="calculator(')')"></td>
+                <td><input type="button" value="B" onclick="calculator('B')"></td>
+            </tr>
+
+            
+            <tr>
+                    <td><input type="button" value="7" onclick="calculator('7')"></td>
+                    <td><input type="button" value="8" onclick="calculator('8')"></td>
+                    <td><input type="button" value="9" onclick="calculator('9')"></td>
+                    <td><input type="button" value="+" onclick="calculator('+')"></td>
+                </tr>
+
+                
+            <tr>
+                    <td><input type="button" value="4" onclick="calculator('4')"></td>
+                    <td><input type="button" value="5" onclick="calculator('5')"></td>
+                    <td><input type="button" value="6" onclick="calculator('6')"></td>
+                    <td><input type="button" value="-" onclick="calculator('-')"></td>
+                </tr>
+
+                
+            <tr>
+                    <td><input type="button" value="1" onclick="calculator('1')"></td>
+                    <td><input type="button" value="2" onclick="calculator('2')"></td>
+                    <td><input type="button" value="3" onclick="calculator('3')"></td>
+                    <td><input type="button" value="*" onclick="calculator('*')"></td>
+                </tr>
+
+                
+            <tr>
+                    <td><input type="button" value="0" onclick="calculator('0')"></td>
+                    <td><input type="button" value="." onclick="calculator('.')"></td>
+                    <td><input type="button" value="/" onclick="calculator('/')"></td>
+                    <td><input type="button" value="=" onclick="ansawer('=')"></td>
+                </tr>
+        </table>
+    </div>
+
+    <p>Making a calculator by own efforts </p>
+    <script>
+       function deleted(){
+            document.getElementById("Myresult").value = ""
+       }
+       function calculator(NewValue){
+            document.getElementById("Myresult").value += NewValue;
+       }
+       function ansawer(){
+            var a = document.getElementById("Myresult").value ;
+            var b = eval(a);
+            document.getElementById("Myresult").value = b;
+
+       }
+    </script>
+</body>
+</html>

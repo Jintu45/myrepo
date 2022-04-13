@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hablu programmer</title>
+    <style>
+       .My-class {
+  background: #dbdbdb;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  position: fixed;
+  top: 35%;
+  left: 34%;
+  padding: 60px 35px;
+  border-radius: 8px;
+}
+        .h{
+            color: #0004ff;
+            font-size: 35px;
+            font-weight: 600;
+
+        }
+        .m {
+  font-size: 20px;
+  color: #ff0f0f;
+  font-weight: 500;
+  font-family: arial;
+}
+        .date {
+     font-size: 32px;
+     margin-top: 4px;
+     color: #36e107;
+     font-weight: 500;
+        line-height: 45px;
+}
+    </style>
+</head>
+<body>
+    <h1>hay this is may first js project</h1>
+    <div class="My-class">
+        
+        <span class = "h"></span>
+        <span class = "m"></span></br>
+        <span class = "date"></span>
+    </div>
+    <script>
+        function MyTime(){
+            var MyDate = new Date();
+            var hr,min = (MyDate.getMinutes() < 10) ? "0"  + MyDate.getMinutes(): MyDate.getMinutes(),
+            sec = (MyDate.getSeconds() < 10 ) ? "0" + MyDate.getSeconds(): MyDate.getSeconds();
+
+            m = (MyDate.getHours() >= 12) ? "PM" : "AM" ;
+
+            if(MyDate.getHours() == 0){
+                hr = 12;
+            }
+            else if( MyDate.getHours() > 12){
+            hr = MyDate.getHours() -12;
+            }
+            else{
+                hr = mydate.getHours();
+            }
+            currentTime = hr + ":" + min + ":" + sec + ":";
+
+            document.getElementsByClassName("h")[0].innerHTML =currentTime;
+            document.getElementsByClassName("m")[0].innerHTML = m;
+            Myday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Trusday", "Friday", "Suterday"];
+            Mymonth = ["January", "February", "March", "April", "May", "June", "July", "Aguest", "Septembar","Octobar","Novembar", "Decembar"],
+            day = MyDate.getDate();
+            var currentDate = Myday[MyDate.getDay()] + "," + Mymonth [MyDate.getMonth()] + day;
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+            }
+
+            MyTime();
+            setInterval (function(){
+                MyTime();
+            },1000);
+    </script>
+</body>
+</html>
+
+
